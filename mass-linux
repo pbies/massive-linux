@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# © 2018 Piotr Biesiada
+
+c="./0cmds.txt"
+n="./1nmap_result.txt"
+ips="./2ips.txt"
+kh="/root/.ssh/known_hosts"
+h="./3hosts.txt"
+
+net="192.168.0.0/24"
+p=password
+
+cat > "$c" <<EOF
+echo -n "hostname="
+hostname
+echo -n "uname -a="
+uname -a
+EOF
+
+nmap -sP $net > "$n"
+grep -ohP "\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}" < "$n" > "$ips"
+while IFS= read -r ip; do
+	ssh-keyscan "$ip" >> "$kh"
+done < "$ips"
+grep -ohP "\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}" < "$kh" | sort -u > "$h"
+while IFS= read -r ip; do
+	echo -n Running $ip...
+	sshpass -p$p ssh root@$ip < "$c" > result$ip.txt 2> /dev/null
+	echo done.
+done < "$h"

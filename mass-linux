@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# © 2018 Piotr Biesiada
+# (C) 2018 Piotr Biesiada
 
 c="./0cmds.txt"
 n="./1nmap_result.txt"

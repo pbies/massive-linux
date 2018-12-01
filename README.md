@@ -9,7 +9,7 @@ Linux script to run commands on all Linux machines in local network
 
 ### Prerequisites
 
-Linux, password for root.
+Linux, password for root - one for all servers. Nmap, ssh-keyscan, sshpass and ssh packages are needed.
 
 ### Installing
 

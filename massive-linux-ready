@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# (C) 2019 Piotr Biesiada
+
+# input
+hosts="./0hosts.txt" # host;login;password per line
+
+# output
+kh=~/.ssh/known_hosts # default
+
+while IFS=";" read -ra host; do
+	echo "Adding keys for ${host[0]}"
+	ssh-keyscan "${host[0]}" >> "$kh"
+	echo "Added keys for ${host[0]}"
+done < "$hosts"

@@ -1,0 +1,2 @@
+192.168.0.123;root;SeCrEt
+myserver.com;user;user_password

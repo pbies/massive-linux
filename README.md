@@ -1,19 +1,29 @@
-# mass-linux
-Linux script to run commands on all Linux machines in local network
+# massive-linux
+Linux scripts to run commands on all Linux machines in local network or given from host list
 
 ## Getting Started
+
+massive-linux1
 
 1. Download the script to empty folder
 2. Edit password, addresses, commands
 3. Run the script
 
+massive-linux2
+
+1. Prepare 0cmds.txt and 0hosts.txt files
+0cmds.txt is file with commands to issue on all servers
+0hosts.txt is file with host;login;password per line
+2. Run mass-linux-ready to gather SSH keys
+3. Run mass-linux2 to issue commands on all servers
+
 ### Prerequisites
 
-Linux, password for root - one for all servers. Nmap, ssh-keyscan, sshpass and ssh packages are needed.
+Linux, password for root - one for all servers (1) or per server (2). Nmap (1), ssh-keyscan, sshpass and ssh packages are needed.
 
 ### Installing
 
-Download is enough.
+Download and prepare files.
 
 ## Running the tests
 
@@ -25,7 +35,7 @@ Script is made for Linux administrators, to massively run commands on all Linux 
 
 ## Built With
 
-Midnight Commander
+Midnight Commander, Sublime Text
 
 ## Contributing
 
@@ -33,7 +43,7 @@ Edits are allowed on separate branches.
 
 ## Versioning
 
-When there will be new version, the current one will be overwritten.
+When there will be new version, the old one will be overwritten.
 
 ## Authors
 

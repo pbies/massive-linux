@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # (C) 2019 Piotr Biesiada
 
-# needs: sshpass ssh-keyscan
+# needs: ssh sshpass
 
 # input
-cmds="./0cmds.txt" # commands to issue on all servers
+cmds="./0cmds.txt" # commands to issue on all servers, may need to end by simple exit and enter
 hosts="./0hosts.txt" # host;login;password per line
 
 # output
@@ -16,7 +16,8 @@ while IFS= read -ra l; do
 	host="${arr[0]}"
 	user="${arr[1]}"
 	pass="${arr[2]}"
-	echo "### Running $host... ###" | tee -a "$results"
+	echo "### Running $host ###" | tee -a "$results"
+	# ssh may need -T or -tt
 	sshpass -p"$pass" ssh "$user"@"$host" < "$cmds" >> "$results" 2>> "$results"
-	echo "### Done "$host". ###" | tee -a "$results"
+	echo "### Done "$host" ###" | tee -a "$results"
 done < "$hosts"

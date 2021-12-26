@@ -82,3 +82,5 @@ massive-linux
 		Greetings go to Polish public sector for this idea.
 
 		If you like my work please share your opinion with me!
+
+		ptrbsd gmail

@@ -1,69 +1,84 @@
-# massive-linux
-Linux scripts to run commands on all Linux machines in local network or given from host list
+massive-linux
+=============
 
-## Getting Started
+		Linux scripts to run commands on all Linux machines
+		in local network or given from host list
 
-massive-linux1
+	Getting Started
+	---------------
 
-1. Download the script to empty folder
-2. Edit password, addresses, commands
-3. Run the script
+		massive-linux1
 
-massive-linux2
+		1. Download the script to empty folder
+		2. Edit password, addresses, commands
+		3. Run the script
 
-1. Prepare 0cmds.txt and 0hosts.txt files
-0cmds.txt is file with commands to issue on all servers
-0hosts.txt is file with host;login;password per line
-2. Run mass-linux-ready to gather SSH keys
-3. Run mass-linux2 to issue commands on all servers
+		massive-linux2
 
-### Prerequisites
+		1. Prepare 0cmds.txt and 0hosts.txt files
+		0cmds.txt is file with commands to issue on all servers
+		0hosts.txt is file with host;login;password per line
+		2. Run mass-linux-ready to gather SSH keys
+		3. Run mass-linux2 to issue commands on all servers
 
-Linux, password for root - one for all servers (1) or per server (2). Nmap (1), ssh-keyscan, sshpass and ssh packages are needed.
+	Prerequisites
+	-------------
 
-### Installing
+		Linux, password for root - one for all servers (1) or per server (2).
+		Nmap (1), ssh-keyscan, sshpass and ssh packages are needed.
 
-Download and prepare files.
+	Installing
+	----------
 
-## Running the tests
+		Download and prepare files.
 
-Always test your commands locally before issuing them to all machines!!!
+	Running the tests
+	-----------------
 
-## Purpose
+		Always test your commands locally before issuing them to all machines!!!
 
-Script is made for Linux administrators, to massively run commands on all Linux machines.
+	Purpose
+	-------
 
-## Built With
+		Script is made for Linux administrators, to massively run commands on
+		all Linux machines.
 
-Midnight Commander, Sublime Text
+	Built With
+	----------
 
-## Contributing
+		Midnight Commander, Sublime Text
 
-Edits are allowed on separate branches.
+	Contributing
+	------------
 
-## Versioning
+		Edits are allowed on separate branches.
 
-When there will be new version, the old one will be overwritten.
+	Versioning
+	----------
 
-## Authors
+		When there will be new version, the old one will be overwritten.
 
-* **Piotr Biesiada** - *Initial work*
+	Authors
+	-------
 
-[github](https://github.com/pbies)
+		Piotr Biesiada - Initial work
 
-[homepage](https://pbies.net/)
+	License
+	-------
 
-## License
+		This project is licensed under the GNU GENERAL PUBLIC LICENSE - see
+		the LICENSE file for details.
 
-This project is licensed under the GNU GENERAL PUBLIC LICENSE - see the [LICENSE](LICENSE) file for details.
-That means you must fulfill these requirements:
-1. your project have the same license
-2. you mention the original author (me)
-3. can't use scripts in commercial nor government environments if they are not free and public without my written permission
-4. you can freely modify and use this project for personal usage
+		That means you must fulfill these requirements:
+		1. your project have the same license
+		2. you mention the original author (me)
+		3. can't use scripts in commercial nor government environments if
+		they are not free and public without my written permission
+		4. you can freely modify and use this project for personal usage
 
-## Acknowledgments
+	Acknowledgments
+	---------------
 
-Greetings go to Polish public sector for this idea.
+		Greetings go to Polish public sector for this idea.
 
-If you like my work please share your opinion with me!
+		If you like my work please share your opinion with me!

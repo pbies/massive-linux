@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# (C) 2021 Piotr Biesiada
 
 # needs: ssh sshpass
 

@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# (C) 2021 Piotr Biesiada
 
 c="./0cmds.txt"
 n="./1nmap_result.txt"
